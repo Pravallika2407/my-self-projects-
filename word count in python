@@ -1,0 +1,12 @@
+# Word Count Program
+filename = input("Enter the file name: ")
+try:
+    # Open and read the file
+    with open(filename, 'r') as file:
+        text = file.read()
+    words = text.split()
+    word_count = len(words)
+    print(f"The file '{filename}' contains {word_count} words.")
+
+except FileNotFoundError:
+    print("Error: File not found. Please check the file name and try again.")
